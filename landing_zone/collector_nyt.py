@@ -267,7 +267,7 @@ def main_iter(num:int, search_movies: bool=False, search_actors: bool=True):
 def main():
     TMDB_DIR = "landing_zone/tmdb"
     json_nums = list(set(map(lambda x: int(x.split("_")[0]), os.listdir(TMDB_DIR))))
-    for num in json_nums[:10]:
+    for num in json_nums:
         main_iter(num)
 
 if __name__ == "__main__":
