@@ -95,7 +95,7 @@ def save_soundtrack(movie_id: int, movie_title: str, album: dict, tracks: list, 
     print(f"Saved soundtrack for '{movie_title}'")
 
 
-def main_iter(num: int):
+def main_iter(num: int, sp: Spotify):
     # Load movie JSON
     
     info_path = os.path.join(TMDB_DIR, f"{num}_info.json")
@@ -120,9 +120,10 @@ def main_iter(num: int):
     
 
     if movie_id in cache["cached_movies"]:
+        print(">> Skipping movie, already saved")
         return 0
 
-    sp = get_spotify_client()
+    
 
     album = search_album_for_movie(title, release_year, sp)
     if album:
@@ -135,11 +136,13 @@ def main_iter(num: int):
         json.dump(cache, f)
 
 def main():
+    sp = get_spotify_client()
     json_nums = list(set(map(lambda x: int(x.split("_")[0]), os.listdir(TMDB_DIR))))
     for num in json_nums:
 
-        main_iter(num)
+        main_iter(num, sp)
 
 
 if __name__ == "__main__":
+
     main()
