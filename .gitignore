@@ -1,2 +1,4 @@
 /landing_zone/tmdb/*
 .env
+landing_zone/tmdb
+landing_zone/nyt
