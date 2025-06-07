@@ -2,3 +2,4 @@
 .env
 landing_zone/tmdb
 landing_zone/nyt
+/formatted_zone/*.jar
