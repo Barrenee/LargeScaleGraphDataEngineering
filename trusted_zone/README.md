@@ -46,6 +46,8 @@ Below are the datasets handled in the notebook along with any specific rules (if
 **Accuracy**	popularity must be ≥ 3
 **Cleaning**	profile_path column is dropped
 
+Ensuring a minimum popularity was done to avoid having, later on, a graph that was too large. This way we could model only the most famous actors, which are also the more interesting ones for analysis and the ones who usually are involved in more than one movie.
+
 #### 5. movie_crew Table
 **Completeness**	credit_id, movie_id, crew_member_id, crew_member_name, department, crew_job must be non-null and non-empty
 **Accuracy**	popularity must be ≥ 1
