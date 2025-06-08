@@ -46,3 +46,10 @@ Ensure you have **PostgreSQL** and a **GraphDB** instance running. You can use D
     SPOTIFY_CLIENT_ID="your_spotify_id"
     SPOTIFY_CLIENT_SECRET="your_spotify_secret"
     ```
+
+
+## Why new data?
+
+Our original landing zone, trusted and formatted contained data which mainly consisted on Time Series. Due to its nature, the integration between the different databases was very difficult, and modeling it as a graph didn't make a lot of sense (we had tweets, which usually create nice KGs, but stock prices and energy demand were difficult to integrate with it).
+
+So, we decided to find out new sources of data. We finally used some movie APIs, together with Spotify. They create a very nice graph, with logical relations and were easier to integrate.
