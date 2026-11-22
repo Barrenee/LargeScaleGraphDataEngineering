@@ -14,14 +14,14 @@ It follows the different Data Engineering zones (landing, formatted, trusted, ex
 
 ## Core Modules & Notebooks
 
--   `landing_zone/`: Python scripts to fetch data from various APIs.
--   `formatted_zone.ipynb`: Defines the PostgreSQL schema and loads raw data into tables.
--   `trusted_zone.ipynb`: Applies data quality rules and validation to the data in PostgreSQL.
--   `graph_zone.ipynb`: Constructs the RDF knowledge graph from the trusted PostgreSQL data and serializes it to `knowledge_graph.ttl`.
--   `embeddings.py`: Trains and evaluates KGE models, saving the best-performing model and its mappings.
--   `sparql_analysis.ipynb`: Querying of the KG via a GraphDB SPARQL endpoint.
--   `recommendation.ipynb`: A movie recommender system built on the trained embeddings.
--   `synergy.ipynb`: Predicts actor-director collaboration ratings using an MLP on combined embeddings.
+-   [`landing_zone/`](./landing_zone/): Python scripts to fetch data from various APIs. 
+-   [`formatted_zone.ipynb`](./formatted_zone/formatted_zone.ipynb): Defines the PostgreSQL schema and loads raw data into tables.
+-   [`trusted_zone.ipynb`](./trusted_zone/README.md): Applies data quality rules and validation to the data in PostgreSQL.
+-   [`graph_zone.ipynb`](./exploitation_zone/README.md#rdf-graph-construction-semantic-querying-embeddings-and-applications): Constructs the RDF knowledge graph from the trusted PostgreSQL data and serializes it to `knowledge_graph.ttl`.
+-   [`embeddings.py`](./exploitation_zone/README.md#kg-embeddings-training-and-evaluation): Trains and evaluates KGE models, saving the best-performing model and its mappings.
+-   [`sparql_analysis.ipynb`](./exploitation_zone/sparql_analysis.ipynb): Querying of the KG via a GraphDB SPARQL endpoint.
+-   [`recommendation.ipynb`](./exploitation_zone/README.md#movie-recommendations-based-on-embeddings): A movie recommender system built on the trained embeddings.
+-   [`synergy.ipynb`](./exploitation_zone/README.md#synergy-prediction-between-actors-and-directors): Predicts actor-director collaboration ratings using an MLP on combined embeddings.
 
 ## Technology Stack
 

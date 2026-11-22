@@ -1,6 +1,6 @@
 # Trusted Zone - Data Quality Rules
 
-This repository implements a Trusted Zone framework designed to ensure the integrity, reliability, and high quality of data stored in our database systems. The rules and constraints defined across various datasets help detect and prevent bad data by addressing key data quality dimensions.
+This repository implements a [Trusted Zone framework](trusted_zone.ipynb) designed to ensure the integrity, reliability, and high quality of data stored in our database systems. The rules and constraints defined across various datasets help detect and prevent bad data by addressing key data quality dimensions.
 Core Data Quality Dimensions
 
 The following overarching principles guide the validation rules implemented:
